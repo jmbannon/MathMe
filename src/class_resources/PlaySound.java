@@ -48,7 +48,7 @@ public class PlaySound {
                     final File file = new File(DIR_PATH);
                     
                     clip = AudioSystem.getClip();
-                    fullPath = file.getAbsolutePath() + "\\" + fileName;
+                    fullPath = file.getAbsolutePath() + "/" + fileName;
 
                     final AudioInputStream inputStream = AudioSystem.
                             getAudioInputStream(new File(fullPath));

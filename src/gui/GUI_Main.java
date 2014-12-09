@@ -8,6 +8,7 @@
 package gui;
 
 import class_resources.GetImage;
+import class_resources.GetOS;
 import database.StudentLogin;
 import java.awt.CardLayout;
 import java.awt.Font;
@@ -71,6 +72,7 @@ public class GUI_Main extends javax.swing.JFrame {
         initPreComponents();
         initComponents();
         initPostComponents();
+        System.out.println(GetOS.getOSName());
     }
     
     /**
@@ -1411,7 +1413,7 @@ public class GUI_Main extends javax.swing.JFrame {
 
     private void PlayAsteroidsItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayAsteroidsItemActionPerformed
         try {
-            RunExe.run();
+            RunExe.run(this);
         } catch (IOException ex) {
             Logger.getLogger(GUI_Main.class.getName()).log(Level.SEVERE, null, ex);
         }

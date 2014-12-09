@@ -7,8 +7,10 @@
  */
 package class_resources;
 
+import java.awt.Component;
 import java.io.File;
 import java.io.IOException;
+import javax.swing.JOptionPane;
 
 /**
  * @author Jesse Bannon
@@ -28,28 +30,34 @@ public class RunExe {
     
     /**
      * Runs asteroids.exe.
+     * @param parentComponent Component to display JOptionPane.
      * @throws IOException If asteroids.exe cannot be found.
      */
-    public static void run() throws IOException {
-        new Thread(new Runnable() {
+    public static void run(final Component parentComponent) throws IOException {
+        if (GetOS.isWindows()) {
+            new Thread(new Runnable() {
 
-            @Override public void run() {
-                try {
-                    final Runtime rt = Runtime.getRuntime();
-                    final File file = new File(PATH);
+                @Override public void run() {
+                    try {
+                        final Runtime rt = Runtime.getRuntime();
+                        final File file = new File(PATH);
                     
-                    if (! file.exists()) 
-                        throw new IllegalArgumentException("The file " 
-                                + PATH + " does not exist");
+                        if (! file.exists()) 
+                            throw new IllegalArgumentException("The file " 
+                                    + PATH + " does not exist");
                     
-                    final Process p = rt.exec("cmd /c start Asteroids.exe", 
-                            null, file.getAbsoluteFile());
+                        final Process p = rt.exec("cmd /c start Asteroids.exe", 
+                                null, file.getAbsoluteFile());
                
-                } catch (IllegalArgumentException | IOException ex) {
-                    System.err.println(ex.getClass() + ": " + ex.getMessage());
-                    System.err.println("for the file at " + PATH);
+                    } catch (IllegalArgumentException | IOException ex) {
+                        System.err.println(ex.getClass() + ": " + ex.getMessage());
+                        System.err.println("for the file at " + PATH);
+                    }
                 }
-            }
-        }).start();
+            }).start();
+            
+        } else
+            JOptionPane.showMessageDialog(parentComponent, "Asteroids is only "
+                + "compatible with Windows operating systems.");         
     }
 }
