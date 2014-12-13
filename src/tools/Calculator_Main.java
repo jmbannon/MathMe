@@ -7,6 +7,8 @@
  */
 package tools;
 
+import java.text.DecimalFormat;
+
 /**
  * @author Jesse Bannon
  * @version 1.0
@@ -14,10 +16,13 @@ package tools;
  * Backend code of a simple calculator to run through a GUI.
  */
 public class Calculator_Main {
+    private static final DecimalFormat format = new DecimalFormat("#.##########");
+    
     private final StringBuilder operatorBuilder = new StringBuilder();
     private final StringBuilder inputBuilder = new StringBuilder();
-    private String operator;
-    private String input;
+    
+    private String operator = "";
+    private String input = "";
     
     private double totalDouble = 0;
     private double tempDouble = 0;
@@ -37,7 +42,10 @@ public class Calculator_Main {
     
     
     public String getInput() {
-        return input;
+        if (!input.isEmpty())
+            return String.valueOf(format.format(Double.valueOf(input))); 
+        else
+            return input;
     }
     
     public String getOperator() {

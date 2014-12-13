@@ -58,14 +58,6 @@
             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="EditMenu.setMnemonic(KeyEvent.VK_E);"/>
           </AuxValues>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="BiographyItem">
-              <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Alt+B"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Biography"/>
-              </Properties>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="ChangePasswordItem">
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">

@@ -261,7 +261,6 @@ public class GUI_Main extends javax.swing.JFrame {
         LogOutItem = new javax.swing.JMenuItem();
         ExitItem = new javax.swing.JMenuItem();
         EditMenu = new javax.swing.JMenu();
-        BiographyItem = new javax.swing.JMenuItem();
         ChangePasswordItem = new javax.swing.JMenuItem();
         ViewMenu = new javax.swing.JMenu();
         ViewGrades = new javax.swing.JMenuItem();
@@ -607,7 +606,7 @@ public class GUI_Main extends javax.swing.JFrame {
             .addGroup(TestNewCardLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(TestNewCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SelectionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE)
+                    .addComponent(SelectionPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(TestNewCardLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(TextPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -787,7 +786,7 @@ public class GUI_Main extends javax.swing.JFrame {
             .addGroup(PortfolioCardLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PortfolioCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(AsteroidsIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                    .addComponent(AsteroidsIconLabel)
                     .addComponent(ProjectZombieIconLabel)
                     .addComponent(MathMeIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -851,14 +850,12 @@ public class GUI_Main extends javax.swing.JFrame {
         BottomUsernameTextField.setEditable(false);
         BottomUsernameTextField.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
         BottomUsernameTextField.setFocusable(false);
-        BottomUsernameTextField.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BottomUsernameTextField.setPreferredSize(new java.awt.Dimension(200, 24));
         BottomPanel.add(BottomUsernameTextField);
 
         BottomFullNameTextField.setEditable(false);
         BottomFullNameTextField.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
         BottomFullNameTextField.setFocusable(false);
-        BottomFullNameTextField.setMargin(new java.awt.Insets(0, 0, 0, 0));
         BottomFullNameTextField.setPreferredSize(new java.awt.Dimension(200, 24));
         BottomPanel.add(BottomFullNameTextField);
 
@@ -902,10 +899,6 @@ public class GUI_Main extends javax.swing.JFrame {
 
         EditMenu.setText("Edit");
         EditMenu.setMnemonic(KeyEvent.VK_E);
-
-        BiographyItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.ALT_MASK));
-        BiographyItem.setText("Biography");
-        EditMenu.add(BiographyItem);
 
         ChangePasswordItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.ALT_MASK));
         ChangePasswordItem.setText("Change Password");
@@ -1466,7 +1459,6 @@ public class GUI_Main extends javax.swing.JFrame {
     private javax.swing.JButton BackButton;
     private javax.swing.JButton BeginTestButton;
     private javax.swing.JLabel BioLabel;
-    private javax.swing.JMenuItem BiographyItem;
     private javax.swing.JTextField BottomFullNameTextField;
     private javax.swing.JPanel BottomPanel;
     private javax.swing.JTextField BottomUsernameTextField;

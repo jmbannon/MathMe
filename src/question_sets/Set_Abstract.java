@@ -40,9 +40,7 @@ public abstract class Set_Abstract {
     /**
      * Method to fill out questions and answers for every question set.
      */
-    protected void fillQuestions() {
-        /* Override in child sets of questions. */
-    }
+    protected abstract void fillQuestions();
     
     /**
      * Returns whether a question set has un-submitted questions.
